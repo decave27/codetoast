@@ -80,7 +80,10 @@ class BaseCog(commands.Cog):
             self.feature_commands[key] = target_cmd
             setattr(self, key, target_cmd)
 
-        self.__cog_commands__ = (*self.__cog_commands__, *self.feature_commands.values())
+        self.__cog_commands__ = (
+            *self.__cog_commands__,
+            *self.feature_commands.values(),
+        )
 
         super().__init__(*args, **kwargs)
 
