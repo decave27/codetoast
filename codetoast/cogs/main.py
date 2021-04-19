@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import discord
 from discord.ext import commands
 from codetoast.cogs.base import BaseCog
 from codetoast.metadata import __version__
@@ -17,7 +18,7 @@ except ImportError:
 class Main(BaseCog):
     @BaseCog.ToastCommand(
         name="codetoast",
-        aliases=["ct"],
+        aliases=["ct", "toast"],
         invoke_without_command=True,
         ignore_extra=False,
         hidden=True,
