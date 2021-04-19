@@ -1,7 +1,7 @@
 import io
 import os
 import re
-
+import discord
 import aiohttp
 from discord.ext import commands
 
